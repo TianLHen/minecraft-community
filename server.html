@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器详情 - Minecraft 社区</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Minecraft 社区</h1>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="submit.html">发布帖子</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- 这是服务器详情页面，用来显示一个服务器的详细信息 -->
+        <div class="server-detail" id="server-detail">
+            <!-- div 容器，用来包装服务器的所有信息 -->
+            <h2 id="server-name">服务器名称</h2>
+            <!-- 显示服务器的名字，id 让 JavaScript 可以找到并修改它 -->
+            
+            <div class="detail-item">
+                <!-- detail-item 是一个信息项的容器 -->
+                <span class="label">服务器 IP：</span>
+                <!-- span 是行内元素，用来包装一小段文字
+                     class="label" 表示这是标签文字（比如"服务器 IP："） -->
+                <span id="server-ip" class="value">-</span>
+                <!-- class="value" 表示这是具体的值，id 让 JavaScript 可以找到并填入真实的 IP -->
+            </div>
+            
+            <div class="detail-item">
+                <span class="label">版本：</span>
+                <span id="server-version" class="value">-</span>
+                <!-- 这里显示服务器的版本，比如 1.20.4 -->
+            </div>
+            
+            <div class="detail-item">
+                <span class="label">简介：</span>
+                <p id="server-description">-</p>
+                <!-- p 是段落，用来显示较长的服务器介绍文字 -->
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-link">返回首页</a>
+        <!-- 这是一个返回按钮，点击后回到首页 -->
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Minecraft 社区 V1</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

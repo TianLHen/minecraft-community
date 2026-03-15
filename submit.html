@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布帖子 - Minecraft 社区</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Minecraft 社区</h1>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="submit.html">发布帖子</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>发布新帖子</h2>
+        <!-- 这是发布帖子的页面，用户可以在这里填写信息并发布新帖子 -->
+        
+        <form id="submit-form" class="submit-form">
+            <!-- form 是表单，用来收集用户输入的信息
+                 id="submit-form" 给表单起个名字，JavaScript 会找到它 -->
+            
+            <div class="form-group">
+                <!-- form-group 是表单的一组，包含标签和输入框 -->
+                <label for="category">分类：</label>
+                <!-- label 是标签，告诉用户这个输入框是干什么的
+                     for="category" 表示这个标签对应 id 为 category 的输入框 -->
+                <select id="category" name="category" required>
+                    <!-- select 是下拉选择框，用户可以从里面选一个选项
+                         required 表示这个是必填的，不能空着 -->
+                    <option value="">请选择分类</option>
+                    <!-- option 是下拉框里的一个选项 -->
+                    <option value="server">服务器</option>
+                    <option value="redstone">红石</option>
+                    <option value="building">建筑</option>
+                    <option value="survival">生存</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="title">标题：</label>
+                <input type="text" id="title" name="title" required>
+                <!-- input 是输入框，type="text" 表示是文本输入框
+                     用户可以在这里输入帖子的标题 -->
+            </div>
+            
+            <div id="server-fields" class="category-fields" style="display: none;">
+                <!-- 这个 div 只有在选择了"服务器"分类时才会显示
+                     style="display: none;" 表示一开始是隐藏的 -->
+                <div class="form-group">
+                    <label for="server-ip">服务器 IP：</label>
+                    <input type="text" id="server-ip" name="server-ip">
+                    <!-- 这里输入服务器的 IP 地址 -->
+                </div>
+                <div class="form-group">
+                    <label for="server-version">版本：</label>
+                    <input type="text" id="server-version" name="server-version">
+                    <!-- 这里输入服务器的版本，比如 1.20.4 -->
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="description">简介：</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+                <!-- textarea 是多行文本框，可以输入很多文字
+                     rows="5" 表示默认显示 5 行高 -->
+            </div>
+            
+            <button type="submit" class="submit-btn">发布</button>
+            <!-- button 是按钮，type="submit" 表示点击后会提交表单 -->
+        </form>
+        
+        <a href="index.html" class="back-link">返回首页</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Minecraft 社区 V1</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- 告诉浏览器使用 HTML5 标准 -->
+<html lang="zh-CN">
+<!-- lang="zh-CN" 表示网页使用中文 -->
+
+<head>
+    <!-- head 部分包含网页的配置信息，不会直接显示在页面上 -->
+    <meta charset="UTF-8">
+    <!-- 设置文字编码为 UTF-8，这样可以正确显示中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 让网页在手机和电脑上都能正常显示 -->
+    <title>问答专区 - Minecraft 社区</title>
+    <!-- 这是网页的标题，会显示在浏览器的标签页上 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 链接到样式文件，让网页变得更漂亮 -->
+</head>
+
+<body>
+    <!-- body 部分是网页的主体，用户能看到的东西都在这里 -->
+    
+    <header>
+        <!-- header 是网页的头部，通常放标题和导航 -->
+        <h1>问答专区</h1>
+        <!-- h1 是最大的标题 -->
+        <nav>
+            <!-- nav 是导航栏，放链接用的 -->
+            <a href="index.html">首页</a>
+            <a href="versions.html">版本库</a>
+            <a href="qa.html">问答</a>
+            <a href="submit.html">发布帖子</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- main 是网页的主要内容区域 -->
+        
+        <section class="qa-intro">
+            <!-- 问答介绍区域 -->
+            <h2>欢迎来到问答专区</h2>
+            <p>在这里你可以提出任何关于 Minecraft 的问题，也可以帮助其他玩家解答疑惑。</p>
+            <p>无论是新手问题还是高级技巧，都欢迎提问和分享！</p>
+        </section>
+        
+        <section class="qa-categories">
+            <!-- 问答分类 -->
+            <h3>问题分类</h3>
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">全部问题</button>
+                <button class="tab-btn" data-category="newbie">新手入门</button>
+                <button class="tab-btn" data-category="survival">生存技巧</button>
+                <button class="tab-btn" data-category="redstone">红石科技</button>
+                <button class="tab-btn" data-category="building">建筑创作</button>
+                <button class="tab-btn" data-category="mod">模组相关</button>
+            </div>
+        </section>
+        
+        <section class="qa-list" id="qa-list">
+            <!-- 问答列表容器，JavaScript 会在这里添加问答卡片 -->
+        </section>
+        
+        <!-- 提问按钮 -->
+        <button id="ask-question-btn" class="ask-btn" aria-label="发布新问题">
+            <span aria-hidden="true">➕</span> 提问
+        </button>
+        
+    </main>
+    
+    <footer>
+        <!-- footer 是网页的底部，通常放版权信息 -->
+        <p>&copy; 2026 Minecraft 社区 V1</p>
+        <!-- p 是段落标签，&copy; 是版权符号© -->
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <!-- script 标签用来加载 JavaScript 文件 -->
+</body>
+</html>

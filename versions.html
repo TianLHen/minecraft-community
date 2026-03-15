@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- 告诉浏览器使用 HTML5 标准 -->
+<html lang="zh-CN">
+<!-- lang="zh-CN" 表示网页使用中文 -->
+
+<head>
+    <!-- head 部分包含网页的配置信息，不会直接显示在页面上 -->
+    <meta charset="UTF-8">
+    <!-- 设置文字编码为 UTF-8，这样可以正确显示中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 让网页在手机和电脑上都能正常显示 -->
+    <title>Minecraft 版本库 - Minecraft 社区</title>
+    <!-- 这是网页的标题，会显示在浏览器的标签页上 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 链接到样式文件，让网页变得更漂亮 -->
+</head>
+
+<body>
+    <!-- body 部分是网页的主体，用户能看到的东西都在这里 -->
+    
+    <header>
+        <!-- header 是网页的头部，通常放标题和导航 -->
+        <h1>Minecraft 版本库</h1>
+        <!-- h1 是最大的标题 -->
+        <nav>
+            <!-- nav 是导航栏，放链接用的 -->
+            <a href="index.html">首页</a>
+            <!-- a 是链接标签，href 指定点击后跳转到哪个页面 -->
+            <a href="versions.html">版本库</a>
+            <a href="qa.html">问答</a>
+            <a href="submit.html">发布帖子</a>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- main 是网页的主要内容区域 -->
+        
+        <section class="version-intro">
+            <!-- 版本库介绍区域 -->
+            <h2>关于 Minecraft 版本</h2>
+            <p>Minecraft 自 2011 年正式发布以来，已经更新了很多个版本。每个版本都带来了新的特性、生物、方块和游戏机制。</p>
+            <p>这里收录了 Minecraft Java版的主要版本信息，帮助你了解游戏的发展历程。</p>
+        </section>
+        
+        <section class="version-filter">
+            <!-- 版本筛选区域 -->
+            <h3>筛选版本</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="latest">最新版</button>
+                <button class="filter-btn" data-filter="release">正式版</button>
+                <button class="filter-btn" data-filter="snapshot">快照版</button>
+                <button class="filter-btn" data-filter="legacy">经典版本</button>
+            </div>
+        </section>
+        
+        <section class="version-list" id="version-list">
+            <!-- 版本列表容器，JavaScript 会在这里添加版本卡片 -->
+            <!-- 这个区域会被动态填充 -->
+        </section>
+        
+        <!-- 版本详情弹窗 -->
+        <div id="version-modal" class="modal" style="display: none;" role="dialog" aria-labelledby="modal-version-title" aria-modal="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="关闭弹窗">&times;</button>
+                <h2 id="modal-version-title">版本详情</h2>
+                <div id="modal-version-content"></div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <!-- footer 是网页的底部，通常放版权信息 -->
+        <p>&copy; 2026 Minecraft 社区 V1</p>
+        <!-- p 是段落标签，&copy; 是版权符号© -->
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <!-- script 标签用来加载 JavaScript 文件
+         src="js/main.js" 表示加载 js 文件夹里的 main.js 文件
+         JavaScript 让网页可以动起来，实现交互功能 -->
+</body>
+</html>
